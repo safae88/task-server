@@ -5,14 +5,7 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(
-  cors({
-    origin: "https://todo-client-bynxj6g25-safae88s-projects.vercel.app", // رابط فيرسيل من الصورة
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
+app.use(cors()); // اتركها فارغة هكذا ليقبل السيرفر الطلبات من أي مكان
 app.use(express.json());
 
 // Connect to MongoDB
